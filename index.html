@@ -4,62 +4,44 @@
 <meta charset="UTF-8">
 <title>FoxBox WebTV</title>
 
-<!-- RUFFLE (rodar SWF) -->
 <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
 
 <style>
 body{
     margin:0;
     background:#0b0b0b;
-    font-family:Arial;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-}
-
-/* CENTRALIZAR CONTEÚDO */
-.container{
-    width:100%;
-    max-width:1000px;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-}
-
-/* BARRA */
-.navbar{
-    width:100%;
     display:flex;
     justify-content:center;
-    margin-top:20px;
+    font-family:Arial;
 }
-
-/* PLAYER */
-.player{
-    margin-top:40px;
+.wrapper{
+    width:1000px;
+    text-align:center;
+    margin-top:20px;
 }
 </style>
 </head>
 
 <body>
 
-<div class="container">
+<div class="wrapper">
 
-    <!-- BARRA FOXBOX SWF -->
-    <div class="navbar">
+    <!-- NAVBAR SWF -->
+    <object width="900" height="120">
+        <param name="movie" value="main-nav.swf">
         <embed src="main-nav.swf" width="900" height="120">
-    </div>
+    </object>
 
-    <!-- PLAYER OPENCASTER -->
-    <div class="player">
-        <iframe 
-            src="https://new.opencaster.com/player/embed?user=FoxBoxWeb"
-            width="900"
-            height="500"
-            frameborder="0"
-            allowfullscreen>
-        </iframe>
-    </div>
+    <br><br>
+
+    <!-- PLAYER -->
+    <iframe 
+        src="https://new.opencaster.com/player/embed?user=FoxBoxWeb"
+        width="900"
+        height="500"
+        frameborder="0"
+        allowfullscreen>
+    </iframe>
 
 </div>
 
